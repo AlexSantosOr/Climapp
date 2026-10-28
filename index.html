@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App del Clima</title>
+    <!-- Tailwind CSS para diseño rápido y limpio -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center">
+    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl w-96 border border-slate-700">
+        <h1 class="text-2xl font-bold mb-6 text-center text-blue-400">Consulta el Clima</h1>
+        
+        <!-- Buscador -->
+        <div class="flex gap-2 mb-6">
+            <input type="text" id="cityInput" placeholder="Escribe una ciudad..." 
+                class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500">
+            <button id="searchBtn" 
+                class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-lg font-semibold transition">Buscar</button>
+        </div>
+
+        <!-- Contenedor de Errores -->
+        <div id="errorMsg" class="hidden bg-red-500/20 border border-red-500 text-red-300 p-3 rounded-lg mb-4 text-sm text-center"></div>
+
+        <!-- Resultados -->
+        <div id="weatherResult" class="hidden text-center">
+            <h2 id="cityName" class="text-xl font-semibold mb-2"></h2>
+            <p id="temp" class="text-4xl font-bold mb-2 text-blue-300"></p>
+            <p id="description" class="capitalize text-slate-400"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
